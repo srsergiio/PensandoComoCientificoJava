@@ -12,7 +12,7 @@ public class Ejercicio3_2_ImpresoraFecha {
      */
     public String imprimirAmericano(String dia, int fecha, String mes, int anio) {
         // TODO: Retornar formato "dia, mes fecha, anio"
-        return null;
+        return  dia+", "+mes+" "+fecha+", "+anio;
     }
 
     /**
@@ -20,6 +20,6 @@ public class Ejercicio3_2_ImpresoraFecha {
      */
     public String imprimirEuropeo(String dia, int fecha, String mes, int anio) {
         // TODO: Retornar formato "dia fecha mes anio"
-        return null;
+        return dia+" "+fecha+" "+mes+" "+anio;
     }
 }

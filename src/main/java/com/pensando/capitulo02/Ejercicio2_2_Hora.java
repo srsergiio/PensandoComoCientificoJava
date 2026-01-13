@@ -7,9 +7,13 @@ package com.pensando.capitulo02;
 public class Ejercicio2_2_Hora {
 
     // TODO: Declarar variables para hora, minuto y segundo (int)
+    int hora, minuto, segundo;
 
     public Ejercicio2_2_Hora(int hora, int minuto, int segundo) {
         // TODO: Inicializar las variables con los valores de los parámetros
+        this.hora=hora;
+        this.minuto=minuto;
+        this.segundo=segundo;
     }
 
     /**
@@ -18,7 +22,8 @@ public class Ejercicio2_2_Hora {
      */
     public int calcularSegundosDesdeMedianoche() {
         // TODO: Implementar la fórmula matemática
-        return 0;
+
+        return (this.hora*3600)+(this.minuto*60)+this.segundo;
     }
 
     /**
@@ -27,7 +32,7 @@ public class Ejercicio2_2_Hora {
      */
     public int calcularSegundosRestantes() {
         // TODO: Calcular total del día menos los segundos pasados
-        return 0;
+        return 86400-(this.hora*3600)-(this.minuto*60)-this.segundo;
     }
 
     /**
@@ -37,6 +42,6 @@ public class Ejercicio2_2_Hora {
      */
     public double calcularPorcentajeDelDia() {
         // TODO: Calcular el porcentaje
-        return 0.0;
+        return   ((((double)this.hora*3600)+((double)this.minuto*60)+(double)this.segundo)*100/86400);
     }
 }

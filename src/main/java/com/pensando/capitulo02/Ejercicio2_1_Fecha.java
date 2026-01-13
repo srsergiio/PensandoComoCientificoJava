@@ -13,7 +13,7 @@ public class Ejercicio2_1_Fecha {
 
     public Ejercicio2_1_Fecha(String diaSemana, int diaMes, String mes, int anio) {
         // TODO: Asignar los valores recibidos a las variables de instancia
-        // this.diaSemana = diaSemana;
+       this.diaSemana = diaSemana;
         this.diaMes = diaMes;
         this.mes = mes;
         this.anio = anio;
@@ -26,7 +26,8 @@ public class Ejercicio2_1_Fecha {
      */
     public String obtenerFormatoArgentino() {
         // TODO: Construir y retornar el String concatenando las variables
-        return null;
+
+        return this.diaSemana+" "+this.diaMes+" de "+this.mes+" de "+this.anio;
     }
 
     /**
@@ -35,7 +36,7 @@ public class Ejercicio2_1_Fecha {
      */
     public String obtenerFormatoAmericano() {
         // TODO: Construir y retornar el String en formato americano
-        return null;
+        return this.diaSemana+", "+this.mes+" "+this.diaMes+", "+this.anio;
     }
 
     /**
@@ -44,6 +45,6 @@ public class Ejercicio2_1_Fecha {
      */
     public String obtenerFormatoEuropeo() {
         // TODO: Construir y retornar el String en formato europeo
-        return null;
+        return this.diaSemana+" "+this.diaMes+" "+this.mes+", "+this.anio;
     }
 }

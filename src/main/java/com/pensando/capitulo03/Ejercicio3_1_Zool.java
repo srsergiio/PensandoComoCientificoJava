@@ -22,6 +22,6 @@ public class Ejercicio3_1_Zool {
     public String zool(int numero, String mascota, String calle) {
         // TODO: Concatenar los parámetros en una frase.
         // Ejemplo esperado: "Numero: 11, Mascota: Firulais, Calle: Siempreviva"
-        return null;
+        return "Numero: "+numero+", Mascota: "+mascota+", Calle: "+calle;
     }
 }
