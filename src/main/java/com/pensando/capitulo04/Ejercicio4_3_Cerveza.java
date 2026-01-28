@@ -14,10 +14,13 @@ public class Ejercicio4_3_Cerveza {
      */
     public String obtenerEstrofa(int n) {
         // TODO: Implementar la lógica con IF / ELSE.
-
+            String Estrofa;
+            if (n == 0) return "No hay más botellas de cerveza en la pared, no hay más botellas de cerveza, no las agarrarás, y no las pasarás, porque no hay más botellas de cerveza en la pared.";
         // Caso Base (n == 0):
         // Retornar: "No hay más botellas de cerveza en la pared, no hay más botellas de cerveza, no las agarrarás, y no las pasarás, porque no hay más botellas de cerveza en la pared."
-
+            else if ((n > 0)) {
+                return this.obtenerEstrofa(n-1)+n+" botellas de cerveza en la pared, "+n+" botellas de cerveza, una sola agarrás, y después la pasás, "+n-1+"botellas de cerveza en la pared.";
+            }
         // Caso Recursivo (n > 0):
         // Retornar: "n botellas de cerveza en la pared, n botellas de cerveza, una sola agarrás, y después la pasás, n-1 botellas de cerveza en la pared."
         // (Cuidado con el singular/plural si n=1, aunque el libro no lo exige estrictamente).
