@@ -14,18 +14,35 @@ public class Ejercicio4_3_Cerveza {
      */
     public String obtenerEstrofa(int n) {
         // TODO: Implementar la lógica con IF / ELSE.
-            String Estrofa;
-            if (n == 0) return "No hay más botellas de cerveza en la pared, no hay más botellas de cerveza, no las agarrarás, y no las pasarás, porque no hay más botellas de cerveza en la pared.";
+        String Estrofa;
+        if (n == 0) {
+            System.out.println("No hay más botellas de cerveza en la pared," +
+                    " no hay más botellas de cerveza, no las agarrarás, y no las pasarás," +
+                    " porque no hay más botellas de cerveza en la pared.");
+
+            return "No hay más botellas de cerveza en la pared," +
+                    " no hay más botellas de cerveza, no las agarrarás, y no las pasarás," +
+                    " porque no hay más botellas de cerveza en la pared.";
+
+        }
         // Caso Base (n == 0):
         // Retornar: "No hay más botellas de cerveza en la pared, no hay más botellas de cerveza, no las agarrarás, y no las pasarás, porque no hay más botellas de cerveza en la pared."
-            else if ((n > 0)) {
-                return this.obtenerEstrofa(n-1)+n+" botellas de cerveza en la pared, "+n+" botellas de cerveza, una sola agarrás, y después la pasás, "+n-1+"botellas de cerveza en la pared.";
-            }
+        else {
+            System.out.println("%d botellas de cerveza en la pared,".formatted(n) +
+                    " %d botellas de cerveza, una sola agarrás,".formatted(n) +
+                    " y después la pasás, %d botellas de cerveza en la pared.".formatted(n - 1));
+
+            return "%d botellas de cerveza en la pared,".formatted(n) +
+                    " %d botellas de cerveza, una sola agarrás,".formatted(n) +
+                    " y después la pasás, %d botellas de cerveza en la pared.".formatted(n - 1)+ obtenerEstrofa( n-1);
+        }
+
+
         // Caso Recursivo (n > 0):
         // Retornar: "n botellas de cerveza en la pared, n botellas de cerveza, una sola agarrás, y después la pasás, n-1 botellas de cerveza en la pared."
         // (Cuidado con el singular/plural si n=1, aunque el libro no lo exige estrictamente).
 
-        return null;
+
     }
 
     /**
@@ -41,5 +58,12 @@ public class Ejercicio4_3_Cerveza {
         // 1. Obtener la estrofa actual: String estrofa = obtenerEstrofa(n);
         // 2. Hacer algo con ella (ej. imprimirla o guardarla).
         // 3. Llamada recursiva: cantarCancion(n - 1);
+    }
+
+    public static void main (String[] args){
+        System.out.println("hola");
+
+          Ejercicio4_3_Cerveza a = new Ejercicio4_3_Cerveza();
+          a.obtenerEstrofa(3);
     }
 }
